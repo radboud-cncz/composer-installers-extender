@@ -17,7 +17,7 @@ class PluginTest extends TestCase
 
     protected $io;
 
-    public function setUp(): void
+    public function setUp()
     {
         parent::setUp();
 
@@ -34,7 +34,7 @@ class PluginTest extends TestCase
         $this->io = $this->createMock(IOInterface::class);
     }
 
-    public function testActive(): void
+    public function testActive()
     {
         $installationManager = $this->createMock(InstallationManager::class);
         $installationManager

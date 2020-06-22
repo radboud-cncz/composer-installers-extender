@@ -9,7 +9,7 @@ use OomphInc\ComposerInstallersExtender\Installers\CustomInstaller;
 
 class CustomInstallerTest extends TestCase
 {
-    public function testLocations(): void
+    public function testLocations()
     {
         $installer = (new \ReflectionClass(CustomInstaller::class))
             ->newInstanceWithoutConstructor();

@@ -15,7 +15,7 @@ class InstallerTest extends TestCase
 
     protected $io;
 
-    public function setUp(): void
+    public function setUp()
     {
         parent::setUp();
 
@@ -31,7 +31,7 @@ class InstallerTest extends TestCase
         $this->io = $this->createMock(IOInterface::class);
     }
 
-    public function testGetInstallPath(): void
+    public function testGetInstallPath()
     {
         $this->composer
             ->method('getPackage')
@@ -58,7 +58,7 @@ class InstallerTest extends TestCase
         );
     }
 
-    public function testSupports(): void
+    public function testSupports()
     {
         $installer = new class extends Installer {
             public function __construct() {}
@@ -76,7 +76,7 @@ class InstallerTest extends TestCase
     /**
      * @dataProvider installerTypesDataProvider
      */
-    public function testGetInstallerTypes($package, array $expected): void
+    public function testGetInstallerTypes($package, array $expected)
     {
         $this->composer
             ->method('getPackage')
